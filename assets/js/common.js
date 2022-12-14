@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function(){
         slidesToShow: 1,
         variableWidth: false,
         arrows:false,
-        autoplay:true,
         autoplaySpeed:3000,
         pauseOnHover:true,
     });
