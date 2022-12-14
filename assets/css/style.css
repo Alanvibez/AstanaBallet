@@ -387,6 +387,10 @@ body {
     .main__title {
         margin-bottom: 20px;
     }
+    
+    .regulations{
+        padding-top:0;
+    }
 
     .section__article {
         font-size: 20px;
