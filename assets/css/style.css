@@ -387,6 +387,10 @@ body {
     .main__title {
         margin-bottom: 20px;
     }
+    
+    .regulations{
+        padding-top:0;
+    }
 
     .main__images_block{
         display: flex;
