@@ -17,22 +17,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
     
-    var audio = new Audio('./assets/audio/mix_6m03s (audio-joiner.com).mp3')
-    audio.play()
-    // $('audio').prop('volume', 0.4)
-    $('video').on('play', function () {
-        audio.pause()
-    })
-
-    $('video').on('pause', function () {
-        audio.play()
-    })
-
-    window.addEventListener('focus', function () {
-        audio.play()
-    });
-
-    window.addEventListener('blur', function () {
-        audio.pause()
-    });
 });
