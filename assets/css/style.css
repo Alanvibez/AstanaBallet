@@ -280,6 +280,77 @@ body {
     max-width: 1040px;
 }
 
+.video__wrapper {
+    position: relative;
+
+}
+
+.video__wrapper video {
+    width: 100%;
+}
+
+.video__wrapper.active::after,
+.video__wrapper.active::before{
+    display: none;
+}
+
+.video__wrapper::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../video/intro.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.play_button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+
+.play_button svg{
+    width: 100%;
+    height: auto;
+}
+
+.play_button:hover svg{
+transform: scale(1.1);
+transition: all .2s ease-in-out;
+}
+
+.slick-dots{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 10px;
+    gap: 10px;
+}
+
+.slick-dots button{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    transition: all .2s linear;
+}
+
+.slick-active button{
+    background-color: var(--color-red);
+}
+
+.slick-dots li button { 
+    font-size: 0; 
+ } 
+
 .social {
     height: 242px;
     display: flex;
@@ -302,7 +373,7 @@ body {
         padding-top: 90px;
     }
 
-    .main__content{
+    .main__content {
         margin: 0 auto;
     }
 
@@ -387,17 +458,17 @@ body {
     .main__title {
         margin-bottom: 20px;
     }
-    
-    .regulations{
-        padding-top:0;
+
+    .regulations {
+        padding-top: 0;
     }
 
-    .main__images_block{
+    .main__images_block {
         display: flex;
         justify-content: center;
     }
 
-    .main__images_block img{
+    .main__images_block img {
         width: 75%;
         height: auto;
     }
@@ -442,7 +513,7 @@ body {
     .nomination__col:nth-child(1) img {
         align-self: center;
         width: auto;
-        height: 220px;
+        height: 175px;
     }
 
     .nomination__col:nth-child(2) {
@@ -479,6 +550,7 @@ body {
         margin-top: 20px;
     }
 
+
     .social__body {
         flex-direction: column;
     }
@@ -488,6 +560,11 @@ body {
         display: flex;
         justify-content: center;
         font-size: 12px;
+    }
+
+    .video__wrapper::after{
+        width: 40px;
+        height: 40px;
     }
 
 }

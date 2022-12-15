@@ -3,12 +3,13 @@ AOS.init()
 document.addEventListener('DOMContentLoaded', function () {
     $('.slider__body').slick({
         infinite: false,
-        speed: 1000,
+        speed: 3000,
         slidesToShow: 1,
         variableWidth: false,
         arrows: false,
-        autoplaySpeed: 3000,
-        pauseOnHover: true,
+        autoplay:true,
+        autoplaySpeed: 7000,
+        dots:true,
     });
     $('.slider__body').on('afterChange', function () {
         // Hide/show captions
@@ -17,4 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
     
+    $('.play_button').on('click', function(){
+        $('.video__wrapper').addClass('active')
+        $('video').trigger('play')
+        $(this).fadeOut()
+    })
 });
