@@ -388,6 +388,20 @@ body {
         margin-bottom: 20px;
     }
 
+    .main__images_block{
+        display: flex;
+        justify-content: center;
+    }
+
+    .main__images_block img{
+        width: 75%;
+        height: auto;
+    }
+
+    .main__images {
+        gap: 10px;
+    }
+
     .section__article {
         font-size: 20px;
         border-width: 1px;
@@ -472,12 +486,4 @@ body {
         font-size: 12px;
     }
 
-    .main__images {
-        gap: 10px;
-    }
-
-    .main__images_block img {
-        width: 100%;
-        height: auto;
-    }
 }
