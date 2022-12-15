@@ -16,21 +16,23 @@ document.addEventListener('DOMContentLoaded', function () {
             $('video').trigger('pause')
         }
     });
-
-    $('audio').prop('volume', 0.4)
+    
+    var audio = new Audio('./assets/audio/mix_6m03s (audio-joiner.com).mp3')
+    audio.play()
+    // $('audio').prop('volume', 0.4)
     $('video').on('play', function () {
-        $('audio').trigger('pause')
+        audio.pause()
     })
 
     $('video').on('pause', function () {
-        $('audio').trigger('play')
+        audio.play()
     })
 
     window.addEventListener('focus', function () {
-        $('audio').trigger('play')
+        audio.play()
     });
 
     window.addEventListener('blur', function () {
-        $('audio').trigger('pause')
+        audio.pause()
     });
 });
